@@ -1,0 +1,25 @@
+<div class="table-responsive">
+    <table class="table table-hover">
+        <thead>
+            <tr>
+                <th style="text-align:center;" >发布时间</th>
+                <th style="text-align:center;">招标名称</th>
+                <th style="text-align:center;">招标内容</th>
+                <th style="text-align:center;">URL</th>
+            </tr>
+            <!-- <th class='active'>操作</th>  -->
+        </thead>
+        <tbody>
+            {% for tendinfo in tendinfos %}
+            <tr>
+                <td >{{ tendinfo.td_time }}</td>
+                <td >{{ tendinfo.td_name }}</td>
+                <td >{{ tendinfo.td_content }}</td>
+                <td ><a href="{{ tendinfo.td_url }}">{{ tendinfo.td_url }}</a></td>
+            </tr>
+            {% endfor %}
+
+        </tbody>
+    </table>
+
+</div>
