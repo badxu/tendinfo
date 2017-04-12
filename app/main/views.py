@@ -23,7 +23,7 @@ def index():
         error_out=False)
     tendinfos = pagination.items
     return render_template('index.html', form=form, tendinfos=tendinfos,
-                            pagination=pagination)
+                            pagination=pagination, current_time=datetime.utcnow())
 
 @main.route('/select/<key>', methods=['GET', 'POST'])
 def select(key):
